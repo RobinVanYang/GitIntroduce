@@ -1,3 +1,5 @@
-# My Awesome Book
+# Git基础教程
 
-This file serves as your book's preface, a great place to describe your book's content and ideas.
+在这里，我会讲一些Git的基础使用。
+
+
