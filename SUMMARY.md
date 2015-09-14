@@ -2,6 +2,6 @@
 
 * [Introduction](README.md)
 * [A Monkey's Story](a_monkeys_story.md)
-* [First Chapter](chapter1.md)
+* [basic operation](basic_operation.md)
 * [Conclusion](conclusion.md)
 
