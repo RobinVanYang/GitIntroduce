@@ -109,3 +109,31 @@ ok, 下面使用下面指令查看远端仓库的配置情况:
 
 
 ##从远端共用Git仓库中拉取代码
+
+我们已经将本地的代码提交到远端的共用仓库， 这时我们的小伙伴也可以拉取我们的代码了，给我们的猴子伙伴起一个名字， 就叫她MM得了。
+
+首先，由于我使用的GitHub做托管， GitHub免费账户只能创建公共的库，即任何人都可以看到仓库owner之前提交的代码，我们需要假设我刚才创建的是私有的库， 这时如果MM想要拉取我们的代码，需要重复我之前创建公私钥的操作， MM在生成公私钥之后，需要把公钥内容提供给仓库owner， 由owner将公钥添加到共用仓库的`Deploy keys`中。
+
+在上面所说的工作做好之后， MM就可以通过如下命令获取到代码了:
+
+        git clone git@github.com:RobinVanYang/learnyounode.git
+
+如果owner在添加MM提供给他的公钥的时候将`Allow write access`打了勾， 那么MM不仅可以拉取代码， 同时也可以push改动到共用库，这也就实现了协同工作的目的了.
+
+
+##总结
+
+将本地代码push到远端的步骤
+1. 创建远端仓库
+2. 设置访问权限(配置ssh-key)
+3. 利用如下命令完成push:
+        git remote add origin {remote git server address}
+        git push origin master
+
+
+clone远端代码到本地的步骤:
+1. 设置访问权限(配置ssh-key)
+2. `git clone {remote git server address}`
+
+
+啰嗦了半天，其实也没啥东西.
