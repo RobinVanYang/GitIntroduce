@@ -82,9 +82,9 @@ ok, 下面使用下面指令查看远端仓库的配置情况:
 ###四. 将本地文件push到远端仓库
 指令:
         
-        git push
+        git push origin master
 
-如果你严格按照我在创建远端共用库所讲的来操作,你会发现如下错误:
+如果你严格按照我在创建远端共用库所讲的来操作,你会发现类似下面的错误:
 
         ➜  learnyounode git:(master) git push origin master
         To git@github.com:RobinVanYang/learnyounode.git
@@ -100,7 +100,11 @@ ok, 下面使用下面指令查看远端仓库的配置情况:
 
         git pull origin master
 
-执行指令后会弹出git的默认编辑器， 让用户添加这次merge(合并)的信息， 描述一下，然后按`:wq`保存并推出.
+执行指令后会弹出git的默认编辑器， 让用户添加这次merge(合并)的信息， 描述一下，然后按`:wq`保存并推出.  
+此时如果你执行`ls`指令，会发现工作目录新增了一个README.md文件
+
+执行`git status`查看一下版本控制的状态, 如果存在类似的提示: `nothing to commit, working directory clean`， 这个时候我们就可以push文件到远端了， push之前可以刷新一下远端的仓库页面，会发现只有一个README.md文件。  
+再次执行`git push origin master`, 推送本地文件到远端，如果没有报任何错误的话，再次刷新远端仓库页面， 会发现我们本地文件已经在远端仓库的文件目录中了.
 
 
 
